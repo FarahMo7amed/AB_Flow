@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 240 10% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+
+    --primary: 346 87% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 15 100% 95%;
+    --secondary-foreground: 15 40% 20%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 15 90% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 346 87% 60%;
+
+    --radius: 1rem;
+
+    --font-display: "Cairo", sans-serif;
+    --font-body: "Cairo", sans-serif;
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(346 87% 60%) 0%,
+      hsl(15 90% 60%) 50%,
+      hsl(45 100% 50%) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(0 0% 100%) 0%,
+      hsl(15 20% 98%) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      135deg,
+      hsl(346 87% 97%) 0%,
+      hsl(45 100% 95%) 100%
+    );
+    --gradient-glow: radial-gradient(
+      600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      hsl(15 90% 60% / 0.08),
+      transparent 40%
+    );
+
+    --shadow-card:
+      0 1px 3px hsl(0 0% 0% / 0.04), 0 4px 24px -4px hsl(346 87% 60% / 0.06);
+    --shadow-card-hover:
+      0 8px 40px -8px hsl(346 87% 60% / 0.15), 0 2px 8px hsl(0 0% 0% / 0.04);
+    --shadow-hero: 0 24px 80px -16px hsl(346 87% 60% / 0.2);
+    --shadow-glow: 0 0 40px hsl(15 90% 60% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 346 87% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 346 87% 60%;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 346 87% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 15 90% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 346 87% 65%;
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(346 87% 65%) 0%,
+      hsl(15 90% 65%) 50%,
+      hsl(45 100% 55%) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      135deg,
+      hsl(346 87% 10%) 0%,
+      hsl(45 100% 10%) 100%
+    );
+    --gradient-glow: radial-gradient(
+      600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      hsl(15 90% 65% / 0.08),
+      transparent 40%
+    );
+
+    --shadow-card:
+      0 1px 3px hsl(0 0% 0% / 0.2), 0 4px 24px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover:
+      0 8px 40px -8px hsl(346 87% 55% / 0.2), 0 2px 8px hsl(0 0% 0% / 0.2);
+    --shadow-hero: 0 24px 80px -16px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(15 90% 65% / 0.12);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 346 87% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 346 87% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+  }
+
+  [dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .card-glass {
+    @apply bg-card/70 backdrop-blur-xl border border-border/50 rounded-2xl;
+    box-shadow: var(--shadow-card);
+    transition:
+      box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-glass:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  .btn-gradient {
+    background-image: var(--gradient-hero);
+    background-size: 200% 200%;
+    @apply text-primary-foreground font-semibold rounded-xl px-7 py-3.5 transition-all duration-300;
+    box-shadow: 0 4px 20px hsl(346 87% 60% / 0.3);
+  }
+
+  .btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(346 87% 60% / 0.4);
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase;
+    background: hsl(var(--primary) / 0.08);
+    color: hsl(var(--primary));
+    border: 1px solid hsl(var(--primary) / 0.12);
+  }
+
+  .mesh-bg {
+    position: relative;
+  }
+
+  .mesh-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        hsl(346 87% 60% / 0.08),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 50%,
+        hsl(15 90% 60% / 0.05),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 50% 30% at 20% 80%,
+        hsl(45 100% 50% / 0.05),
+        transparent
+      );
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "login": "Login",
+    "register": "Register",
+    "logo": "ABFlow",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "user_placeholder": "User",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Optimize Your Website with Powerful A/B Testing",
+    "subtitle": "Run experiments, analyze results, and boost conversions with our enterprise-grade experimentation platform. Make data-driven decisions that drive real growth.",
+    "cta_primary": "Start Experimenting",
+    "cta_secondary": "View Dashboard",
+    "badge": "Now with AI-powered insights",
+    "stats": {
+      "experiments": "10K+ experiments run",
+      "uptime": "99.9% uptime",
+      "compliance": "SOC 2 Compliant"
+    },
+    "mockup": {
+      "conversion_rate": "Conversion Rate",
+      "active_tests": "Active Tests",
+      "total_visitors": "Total Visitors"
+    }
+  },
+  "common": {
+    "welcome": "Welcome",
+    "start_building": "Start building your amazing project here!"
+  },
+  "features": {
+    "title": "Everything You Need to Experiment",
+    "subtitle": "Powerful tools designed for modern teams who want to ship faster and smarter.",
+    "experiment_builder": {
+      "title": "Experiment Builder",
+      "description": "Visual editor to create and deploy A/B tests without writing code. Drag-and-drop interface with live preview."
+    },
+    "realtime_analytics": {
+      "title": "Real-time Analytics",
+      "description": "Monitor experiment performance as it happens. Live dashboards with statistical significance indicators."
+    },
+    "conversion_tracking": {
+      "title": "Conversion Tracking",
+      "description": "Track every conversion event across your funnel. Custom goals, revenue tracking, and attribution models."
+    },
+    "feature_flags": {
+      "title": "Feature Flags",
+      "description": "Roll out features gradually with powerful targeting rules. Segment users and control rollout percentage."
+    }
+  },
+  "how_it_works": {
+    "title": "How It Works",
+    "subtitle": "Get started in minutes, not days.",
+    "step1": {
+      "title": "Create Experiment",
+      "description": "Define your hypothesis, set up variants, and configure targeting rules with our intuitive builder."
+    },
+    "step2": {
+      "title": "Split Traffic",
+      "description": "Automatically distribute visitors across variants with our intelligent traffic allocation engine."
+    },
+    "step3": {
+      "title": "Analyze Results",
+      "description": "Get statistically significant results with our Bayesian engine. Make confident decisions backed by data."
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free. Scale as you grow. No hidden fees.",
+    "monthly": "/month",
+    "starter": {
+      "name": "Starter",
+      "price": "$0",
+      "description": "Perfect for getting started",
+      "features": [
+        "Up to 5 experiments",
+        "10,000 monthly visitors",
+        "Basic analytics",
+        "Email support",
+        "1 team member"
+      ],
+      "cta": "Get Started Free"
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "$79",
+      "description": "For growing teams",
+      "popular": "Most Popular",
+      "features": [
+        "Unlimited experiments",
+        "100,000 monthly visitors",
+        "Advanced analytics & segments",
+        "Priority support",
+        "10 team members",
+        "Feature flags",
+        "API access"
+      ],
+      "cta": "Start Free Trial"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "description": "For large organizations",
+      "features": [
+        "Unlimited everything",
+        "Unlimited visitors",
+        "Custom integrations",
+        "Dedicated account manager",
+        "SSO & SAML",
+        "SLA guarantee",
+        "On-premise deployment"
+      ],
+      "cta": "Contact Sales"
+    }
+  },
+  "testimonials": {
+    "title": "Trusted by Data-Driven Teams",
+    "subtitle": "See how leading companies optimize their digital experiences.",
+    "label": "Testimonials",
+    "items": [
+      {
+        "quote": "We increased our conversion rate by 34% in just 3 months using ABFlow. The real-time analytics made it easy to make fast, confident decisions.",
+        "name": "Sarah Chen",
+        "role": "VP of Growth",
+        "company": "TechFlow Inc."
+      },
+      {
+        "quote": "The experiment builder is incredibly intuitive. Our team went from zero tests to running 15 concurrent experiments within the first week.",
+        "name": "Marcus Rodriguez",
+        "role": "Product Manager",
+        "company": "CloudScale"
+      },
+      {
+        "quote": "Feature flags changed how we ship software. We can now deploy with confidence and roll back instantly if something goes wrong.",
+        "name": "Emily Watson",
+        "role": "Engineering Lead",
+        "company": "DataPulse"
+      }
+    ]
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "features": "Features",
+    "pricing": "Pricing",
+    "integrations": "Integrations",
+    "changelog": "Changelog",
+    "about": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "contact": "Contact",
+    "docs": "Documentation",
+    "api_reference": "API Reference",
+    "guides": "Guides",
+    "community": "Community",
+    "copyright": "© 2026 ABFlow. All rights reserved.",
+    "description": "The modern experimentation platform for data-driven teams.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your account to continue",
+    "email": "Email Address",
+    "email_placeholder": "you@company.com",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot Password?",
+    "submit": "Sign In",
+    "no_account": "Don't have an account?",
+    "register_link": "Create one"
+  },
+  "register": {
+    "title": "Create Your Account",
+    "subtitle": "Start optimizing your website today",
+    "name": "Full Name",
+    "name_placeholder": "John Doe",
+    "email": "Email Address",
+    "email_placeholder": "you@company.com",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "submit": "Create Account",
+    "has_account": "Already have an account?",
+    "login_link": "Sign in"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email_invalid": "Please enter a valid email",
+    "password_min": "Password must be at least 8 characters",
+    "passwords_mismatch": "Passwords do not match"
+  },
+  "not_found": {
+    "title": "404",
+    "subtitle": "Oops! Page not found",
+    "back_home": "Return to Home"
+  }
+}
