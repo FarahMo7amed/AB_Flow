@@ -1,10 +1,12 @@
 import { useLanguage } from "../context/LanguageContext";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const { user } = useAuth();
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden mesh-bg">
@@ -36,6 +38,7 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
+              {!user ? (
               <Link
                 to="/register"
                 className="btn-gradient inline-flex items-center gap-2.5 text-base group"
@@ -43,8 +46,9 @@ export default function HeroSection() {
                 {t("hero.cta_primary")}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
+              ) : (
               <Link
-                to="/#features"
+                to="/dashboard"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl border border-border/60 bg-card/50 backdrop-blur-sm text-foreground font-semibold hover:bg-card hover:border-border transition-all duration-300 group"
               >
                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
@@ -52,6 +56,7 @@ export default function HeroSection() {
                 </div>
                 {t("hero.cta_secondary")}
               </Link>
+              )}
             </div>
 
             <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">

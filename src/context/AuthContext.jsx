@@ -1,12 +1,35 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem("abflow_user");
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("abflow_user", JSON.stringify(user));
+    } else {
+      localStorage.removeItem("abflow_user");
+    }
+  }, [user]);
 
   const login = (userData) => {
-    setUser(userData);
+    setUser({
+      ...userData,
+      onboardingCompleted: false,
+      onboardingAnswers: null,
+    });
+  };
+
+  const completeOnboarding = (answers) => {
+    setUser((prev) => ({
+      ...prev,
+      onboardingCompleted: true,
+      onboardingAnswers: answers,
+    }));
   };
 
   const logout = () => {
@@ -14,7 +37,9 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider
+      value={{ user, login, logout, completeOnboarding }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -27,4 +52,3 @@ export function useAuth() {
   }
   return context;
 }
-

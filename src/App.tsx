@@ -6,7 +6,11 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/Dashboard";
+import ExperimentDetails from "./pages/ExperimentDetails";
+import Onboarding from "./pages/Onboarding";
 import { MainLayout, AuthLayout, AppLayout } from "./layouts/Layouts";
+
 
 const App = () => {
   return (
@@ -17,13 +21,23 @@ const App = () => {
             <Routes>
               <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
-                <Route path="*" element={<NotFound />} />
               </Route>
 
               <Route element={<AuthLayout />}>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
               </Route>
+
+              <Route element={<AppLayout />}>
+                <Route path="/onboarding" element={<Onboarding />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route
+                  path="/experiments/:id"
+                  element={<ExperimentDetails />}
+                  />
+              </Route>
+
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
         </LanguageProvider>
@@ -33,4 +47,3 @@ const App = () => {
 };
 
 export default App;
-

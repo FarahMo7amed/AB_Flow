@@ -36,7 +36,7 @@ export default function Register() {
     setErrors(errs);
     if (Object.keys(errs).length === 0) {
       login({ name: form.name, email: form.email });
-      navigate("/");
+      navigate("/onboarding");
     }
   };
 
