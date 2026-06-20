@@ -10,14 +10,7 @@ import { MainLayout, AuthLayout, AppLayout } from "./layouts/Layouts";
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <AuthProvider>
-        <LanguageProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route element={<MainLayout />}>
-                <Route path="/" element={<Home />} />
-                <Route path="*" element={<NotFound />} />
+th="*" element={<NotFound />} />
               </Route>
 
               <Route element={<AuthLayout />}>
