@@ -30,26 +30,7 @@ export default function Navbar() {
     }
   };
 
-  return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}
-    >
-      <div className={`container mx-auto transition-all duration-300`}>
-        <div
-          className={`flex items-center justify-between h-14 px-5 rounded-2xl transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-xl border border-border/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)]" : "bg-transparent"}`}
-        >
-          <Link to="/" className="flex items-center group">
-            <img
-              src="/abflow_logo_light.png"
-              alt="ABFlow"
-              className="h-9 w-auto object-contain group-hover:opacity-90 transition-opacity block dark:hidden"
-            />
-            <img
-              src="/abflow_logo_dark.svg"
-              alt="ABFlow"
-              className="h-9 w-auto object-contain group-hover:opacity-90 transition-opacity hidden dark:block"
-            />
-          </Link>
+
 
           <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
             <Link
@@ -219,23 +200,7 @@ export default function Navbar() {
                         {user?.name || t("nav.user_placeholder")}
                       </span>
                     </div>
-                    <button
-                      onClick={() => {
-                        logout();
-                        setMobileOpen(false);
-                      }}
-                      className="p-2 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg transition-colors"
-                    >
-                      <LogOut className="w-5 h-5" />
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+                
   );
 }
 
