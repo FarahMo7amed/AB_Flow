@@ -8,23 +8,7 @@ export default function PricingSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="pricing" className="py-28 relative mesh-bg">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
-        >
-          <span className="section-label mb-4 inline-flex">
-            {t("nav.pricing")}
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5">
-            {t("pricing.title")}
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            {t("pricing.subtitle")}
-          </p>
+   
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
@@ -46,20 +30,6 @@ export default function PricingSection() {
                   isPro
                     ? "bg-card border-2 border-primary/30 shadow-lg ring-1 ring-primary/10 scale-[1.03]"
                     : "card-glass"
-                }`}
-              >
-                {isPro && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold shadow-md">
-                    <Zap className="w-3 h-3" />
-                    {t("pricing.pro.popular")}
-                  </div>
-                )}
-                <h3 className="font-display font-semibold text-lg text-foreground mb-1">
-                  {t(`pricing.${key}.name`)}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-6">
-                  {t(`pricing.${key}.description`)}
-                </p>
                 <div className="flex items-baseline gap-1 mb-8">
                   <span className="font-display text-5xl font-bold text-foreground">
                     {t(`pricing.${key}.price`)}
