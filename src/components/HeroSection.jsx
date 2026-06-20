@@ -7,29 +7,8 @@ export default function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden mesh-bg">
-      <div className="absolute top-1/3 left-[10%] w-72 h-72 bg-primary/10 rounded-full blur-[100px] floating" />
-      <div className="absolute bottom-1/4 right-[15%] w-64 h-64 bg-accent/10 rounded-full blur-[100px] floating-delayed" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
-
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="section-label mb-8 mx-auto w-fit">
-              <Sparkles className="w-3.5 h-3.5" />
-              {t("hero.badge")}
+   
             </div>
-
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground mb-6">
-              {t("hero.title").split(" ").slice(0, -2).join(" ")}{" "}
-              <span className="gradient-text">
-                {t("hero.title").split(" ").slice(-2).join(" ")}
-              </span>
-            </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
               {t("hero.subtitle")}
