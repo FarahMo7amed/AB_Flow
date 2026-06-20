@@ -8,39 +8,7 @@ const stepKeys = ["step1", "step2", "step3"];
 export default function HowItWorks() {
   const { t } = useLanguage();
 
-  return (
-    <section className="py-28 relative overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{ background: "var(--gradient-subtle)" }}
-      />
-
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-20"
-        >
-          <span className="section-label mb-4 inline-flex">
-            {t("how_it_works.title")}
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5">
-            {t("how_it_works.title")}
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            {t("how_it_works.subtitle")}
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
-          <div className="hidden md:block absolute top-12 left-[20%] right-[20%] h-px bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20" />
-
-          {stepKeys.map((key, i) => {
-            const Icon = stepIcons[i];
-            return (
-              <motion.div
-                key={key}
+ 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
