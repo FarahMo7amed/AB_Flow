@@ -10,10 +10,7 @@ export function MainLayout() {
       <main className="flex-1">
         <Outlet />
       </main>
-      <Footer />
-    </div>
-  );
-}
+
 
 export function AuthLayout() {
   const { user } = useAuth();
@@ -24,12 +21,8 @@ export function AuthLayout() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1">
-        <Outlet />
-      </main>
+      <ma
     </div>
-  );
-}
 
 export function AppLayout() {
   const { user } = useAuth();
@@ -44,8 +37,7 @@ export function AppLayout() {
       <main className="flex-1 pt-14">
         <Outlet />
       </main>
-      <Footer />
-    </div>
+      
   );
 }
 

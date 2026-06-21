@@ -14,27 +14,7 @@ export default function Register() {
     password: "",
     confirmPassword: "",
   });
-  const [errors, setErrors] = useState({});
-
-  const validate = () => {
-    const errs = {};
-    if (!form.name.trim()) errs.name = t("validation.required");
-    if (!form.email.trim()) errs.email = t("validation.required");
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      errs.email = t("validation.email_invalid");
-    if (!form.password) errs.password = t("validation.required");
-    else if (form.password.length < 8)
-      errs.password = t("validation.password_min");
-    if (form.password !== form.confirmPassword)
-      errs.confirmPassword = t("validation.passwords_mismatch");
-    return errs;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const errs = validate();
-    setErrors(errs);
-    if (Object.keys(errs).length === 0) {
+  const [err(errs).length === 0) {
       login({ name: form.name, email: form.email });
       navigate("/");
     }
@@ -47,16 +27,7 @@ export default function Register() {
 
   const inputClass =
     "w-full pl-10 pr-4 py-3 rounded-xl bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40 transition-all duration-200";
-
-  return (
-    <div className="min-h-screen bg-background mesh-bg">
-      <div className="flex items-center justify-center min-h-screen pt-16 px-4 py-8">
-        <div className="w-full max-w-md">
-          <div className="card-glass p-8 sm:p-10 rounded-2xl">
-            <div className="flex justify-center mb-6">
-              <Link to="/">
-                <img
-                  src="/abflow_logo_light.png"
+            src="/abflow_logo_light.png"
                   alt="ABFlow"
                   className="h-10 w-auto object-contain block dark:hidden"
                 />

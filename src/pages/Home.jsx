@@ -10,9 +10,5 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <HowItWorks />
-      <PricingSection />
-      <TestimonialsSection />
-    </div>
-  );
-}
+
 

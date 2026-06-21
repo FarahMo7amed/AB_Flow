@@ -41,39 +41,6 @@ export default function Login() {
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
-  const inputClass =
-    "w-full pl-10 pr-4 py-3 rounded-xl bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/40 transition-all duration-200";
-
-  return (
-    <div className="min-h-screen bg-background mesh-bg">
-      <div className="flex items-center justify-center min-h-screen pt-16 px-4">
-        <div className="w-full max-w-md">
-          <div className="card-glass p-8 sm:p-10 rounded-2xl">
-            <div className="card-glass p-8 sm:p-10 rounded-2xl">
-              <Link to="/">
-                <img
-                  src="/abflow_logo_light.png"
-                  alt="ABFlow"
-                  className="h-10 w-auto object-contain block dark:hidden"
-                />
-                <img
-                  src="/abflow_logo_dark.svg"
-                  alt="ABFlow"
-                  className="h-10 w-auto object-contain hidden dark:block"
-                />
-              </Link>
-            </div>
-            <div className="text-center mb-8">
-              <h1 className="font-display text-2xl font-bold text-foreground mb-2">
-                {t("login.title")}
-              </h1>
-              <p className="text-sm text-muted-foreground">
-                {t("login.subtitle")}
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
                   {t("login.email")}
                 </label>

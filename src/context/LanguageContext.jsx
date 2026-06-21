@@ -28,17 +28,6 @@ export function LanguageProvider({ children }) {
       return getNestedValue(translations[language], key) || key;
     },
     [language]
-  );
-
-  const toggleLanguage = useCallback(() => {
-    setLanguage((prev) => (prev === "en" ? "ar" : "en"));
-  }, []);
-
-  return (
-    <LanguageContext.Provider value={{ language, direction, t, toggleLanguage, setLanguage }}>
-      {children}
-    </LanguageContext.Provider>
-  );
 }
 
 export function useLanguage() {

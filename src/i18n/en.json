@@ -6,14 +6,7 @@
     "login": "Login",
     "register": "Register",
     "logo": "ABFlow",
-    "theme_light": "Light",
-    "theme_dark": "Dark",
-    "user_placeholder": "User",
-    "logout": "Logout"
-  },
-  "hero": {
-    "title": "Optimize Your Website with Powerful A/B Testing",
-    "subtitle": "Run experiments, analyze results, and boost conversions with our enterprise-grade experimentation platform. Make data-driven decisions that drive real growth.",
+    "theme_light"eriments, analyze results, and boost conversions with our enterprise-grade experimentation platform. Make data-driven decisions that drive real growth.",
     "cta_primary": "Start Experimenting",
     "cta_secondary": "View Dashboard",
     "badge": "Now with AI-powered insights",
