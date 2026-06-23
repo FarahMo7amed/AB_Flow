@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import ExperimentDetails from "./pages/ExperimentDetails";
 import Onboarding from "./pages/Onboarding";
+import NewExperiment from "./pages/NewExperiment";
 import { MainLayout, AuthLayout, AppLayout } from "./layouts/Layouts";
 
 
@@ -31,6 +32,7 @@ const App = () => {
               <Route element={<AppLayout />}>
                 <Route path="/onboarding" element={<Onboarding />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/new" element={<NewExperiment />} />
                 <Route
                   path="/experiments/:id"
                   element={<ExperimentDetails />}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { experiments } from "../../data/experiments";
+import Dashboard from "../../pages/Dashboard"
 
 export default function ExperimentTable({
   searchTerm,
@@ -130,7 +131,8 @@ export default function ExperimentTable({
 
               <td className="py-5">
                 <Link
-                  to={`/experiments/${exp.id}`}
+                  to=
+                  "/dashboard"
                   className="text-primary hover:underline font-medium"
                 >
                   View Details

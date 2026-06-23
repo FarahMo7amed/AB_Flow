@@ -38,26 +38,31 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
-              {!user ? (
-              <Link
-                to="/register"
-                className="btn-gradient inline-flex items-center gap-2.5 text-base group"
-              >
-                {t("hero.cta_primary")}
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-              ) : (
-              <Link
-                to="/dashboard"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl border border-border/60 bg-card/50 backdrop-blur-sm text-foreground font-semibold hover:bg-card hover:border-border transition-all duration-300 group"
-              >
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Play className="w-3.5 h-3.5 text-primary" />
-                </div>
-                {t("hero.cta_secondary")}
-              </Link>
-              )}
-            </div>
+
+  {/* Start Experimenting */}
+  <Link
+    to={!user ? "/register" : "/new"}
+    className="btn-gradient inline-flex items-center gap-2.5 text-base group"
+  >
+    {t("hero.cta_primary")}
+    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+  </Link>
+
+  {/* View Dashboard يظهر فقط بعد Login */}
+  {user && (
+    <Link
+      to="/dashboard"
+      className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl border border-border/60 bg-card/50 backdrop-blur-sm text-foreground font-semibold hover:bg-card hover:border-border transition-all duration-300 group"
+    >
+      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+        <Play className="w-3.5 h-3.5 text-primary" />
+      </div>
+
+      {t("hero.cta_secondary")}
+    </Link>
+  )}
+
+</div>
 
             <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
